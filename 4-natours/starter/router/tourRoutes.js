@@ -4,6 +4,10 @@ const route = express.Router();
 
 //route.param('id', tourController.checkId);
 
+route
+  .route('/getCheapersTours')
+  .get(tourController.getCheapersTours, tourController.getTours);
+
 route.route('/').get(tourController.getTours).post(tourController.createTour);
 
 route
